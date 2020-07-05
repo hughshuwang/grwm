@@ -7,3 +7,6 @@
 [submodule "shell/oh-my-zsh/custom/plugins/zsh-completions"]
 	path = shell/oh-my-zsh/custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot

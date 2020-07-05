@@ -15,10 +15,11 @@
     - Place repo anywhere in a (fresh) Linux/macOS system 
     - For app installation, simply: `sudo apt-get install ranger zsh curl git vim exuberant-ctags fzf`
     - For oh-my-zsh, one more: `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-    - In repo root dir: `./rock`, for vim plugins and coc: `:PluginInstall; :CocInstall coc-python` etc.
+    - In repo root dir: `sh rock`, for vim plugins and coc: `:PluginInstall; :CocInstall coc-python` etc.
     - Enjoy!
    
 - Add git submodules:
+    - dotbot: `git submodule add https://github.com/anishathalye/dotbot dotbot`
     - Vundle.vim: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
     - zsh-autosuggestions: `git submodule add https://github.com/zsh-users/zsh-autosuggestions shell/oh-my-zsh/custom/plugins/zsh-autosuggestions`
     - zsh-completions: `git submodule add https://github.com/zsh-users/zsh-completions shell/oh-my-zsh/custom/plugins/zsh-completions`
