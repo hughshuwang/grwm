@@ -1,0 +1,41 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+
+    # editor
+    ~/.vimrc: editor/vimrc
+    ~/.vim/bundle/Vundle.vim: editor/vim/bundle/Vundle.vim
+    ~/.vim/colors: editor/vim/colors
+    ~/.vim/doc: editor/vim/doc
+    ~/.vim/plugin: editor/vim/plugin
+    ~/.vim/syntax: editor/vim/syntax
+    ~/.vim/filetype.vim: editor/vim/filetype.vim
+
+    # shell
+    ~/.bash_profile: shell/bash_profile
+    ~/.profile: shell/profile
+    ~/.tmux.conf: shell/tmux.conf
+    ~/.zshrc: shell/zshrc
+    ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom
+
+    # git
+    ~/.gitconfig: git/gitconfig
+
+    # dev
+    ~/.ipython: dev/ipython
+    ~/.jupyter: dev/jupyter
+
+    # config
+    ~/.config/ranger: config/ranger
+    ~/.config/htop: config/htop
+    ~/.config/cmus: config/cmus
+    ~/.config/code-server: config/code-server
+    ~/.config/karabiner_backup: remap/karabiner_backup # manual
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

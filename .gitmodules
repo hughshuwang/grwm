@@ -1,0 +1,9 @@
+[submodule "editor/vim/bundle/Vundle.vim"]
+	path = editor/vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim
+[submodule "shell/oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = shell/oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "shell/oh-my-zsh/custom/plugins/zsh-completions"]
+	path = shell/oh-my-zsh/custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
