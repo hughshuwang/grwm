@@ -133,6 +133,7 @@ export LANG=en_US.UTF-8
 # fzf support
 alias vf='vim $(fzf)'
 alias cf='cd $(fzf)'
+alias lsa='ls -a'
 
 alias vv='vim'
 alias cl='clear'
@@ -179,5 +180,3 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 
 # syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-tt

@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIG="rock.conf.yaml"
+CONFIG="rock.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
