@@ -21,7 +21,9 @@
     ~/.profile: shell/profile
     ~/.tmux.conf: shell/tmux.conf
     ~/.zshrc: shell/zshrc
-    ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom
+    ~/.oh-my-zsh/custom/themes/custom.zsh-theme: shell/custom.zsh-theme
+    # ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom 
+    # only link theme, for oh-my-zsh git mgmt
 
     # git
     ~/.gitconfig: git/gitconfig
