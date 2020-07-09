@@ -205,6 +205,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " let g:airline_theme='onehalfdark' " third-party scheme
 let g:airline_theme='raven' " official airline scheme
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=' '
 " 'deus', 'angr', 'atomic', 'bubblegum', 'molokai', 'raven'
 
 " Plugin 'sillybun/vim-repl' " not usable, 051320
