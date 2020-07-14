@@ -1,0 +1,54 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+
+    # editor
+    ~/.vimrc: editor/vimrc
+    ~/.vim/bundle/Vundle.vim: editor/vim/bundle/Vundle.vim
+    ~/.vim/colors: editor/vim/colors
+    ~/.vim/doc: editor/vim/doc
+    ~/.vim/plugin: editor/vim/plugin
+    ~/.vim/syntax: editor/vim/syntax
+    ~/.vim/filetype.vim: editor/vim/filetype.vim
+
+    # shell
+    ~/.bash_profile: shell/bash_profile
+    ~/.profile: shell/profile
+    ~/.tmux.conf: shell/tmux.conf
+    ~/.zshrc: shell/zshrc
+    ~/.oh-my-zsh/custom/themes/custom.zsh-theme: shell/custom.zsh-theme
+    # ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom 
+    # only link theme, for oh-my-zsh git mgmt
+
+    # xfce4 terminal
+    # gruvbox theme,  
+    ~/.local/share/xfce4/terminal/colorschemes/Gruvbox-dark.theme: shell/Gruvbox-dark.theme
+ 
+    # git
+    ~/.gitconfig: git/gitconfig
+
+    # dev
+    # ~/.ipython: dev/ipython
+    ~/.jupyter: dev/jupyter
+
+    # config
+    ~/.config/ranger: config/ranger
+    ~/.config/htop: config/htop
+    ~/.config/cmus: config/cmus
+    ~/.config/code-server: config/code-server # gruvbox, python, vim
+    ~/.config/karabiner_backup: remap/karabiner_backup # manual
+
+    # remap (under x11 using xmodmap and xcape
+    # ~/.xmodmap.conf: remap/xmodmap_backup/xmodmap_win.conf
+    ~/.xmodmap.conf: remap/xmodmap_backup/xmodmap_mac.conf
+    ~/.xmodmap.sh: remap/xmodmap_backup/xmodmap.sh
+    # ~/.config/autostart/xmodmap.deskop: remap/xmodmap_backup/xmodmap.desktop
+    # manual copy required, link won't work
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

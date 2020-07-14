@@ -17,15 +17,30 @@ This customized set includes configs \& themes for:
 - Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gruvbox](https://github.com/morhetz/gruvbox)
 
 
-## Usage
+## Standard Procedure (30mins)
 
-The goal is to minimize the effort required for setting up and managing the personal system environment:
-- **location:** `git clone` this repo anywhere in a (fresh) Linux/macOS system 
-- **tool installation:** `sudo apt-get install ranger zsh curl git vim exuberant-ctags fzf tmux nodejs yarn fwupd xcape`
-- **oh-my-zsh:** `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- **repo root:**  `sh rock`, it will take care of all registered git submodules, when transitioning git repo, see below
-- **vim plugins and coc**: `:PluginInstall; :CocInstall coc-python`
-- **enjoy!**
+Starting from a clean Linux install, assuming a Debian-based system and a GNOME-based desktop:
+- Part I, hardware checks:
+  - BIOS and drivers. (kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker and mic) 
+  - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
+  - For MBP, in display select low resolution with 100% scaling, disable hi-res daemon
+- Part II, software:
+  - `sudo apt install git; cd ~; git clone https://github.com/hughshuwang/dotfiles; cd dotfiles` 
+  - `./rock` twice and switch to xfce4-term, 
+  - `./roll` to deploy dotfiles after selecting keyboard conf file, copy xmodmap.desktop, reboot
+  - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
+  - `git config --global credential.helper store` then `git pull/push` and enter credentials to save 
+  - `:PluginInstall` in vim, xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.90
+  - In chrome, install gnome shell extentions and apply transparent top bar 
+  - In tweaks, change theme to `Adwaita-dark`, for MBP, better live with command as super
+  - In ./debs, `sudo zsh ./install.sh`
+- Part III, Python/Anaconda:
+  - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
+  - Run `python dotfiles/env/python_test.py` to test python environment
+  - Everytime after restart a (base) environment should automatically loaded 
+- TODOs:
+  - Share clipboard and vim copy to terminal
+  - coc support in vim
 
 
 ## Tests
@@ -33,14 +48,13 @@ The goal is to minimize the effort required for setting up and managing the pers
 This toolbox has been tested in the following environments:
 - **Darwin**, OS X Catalina 10.15.5 (x86)
 - **Debian 10 Buster**, GCP Compute Engine (x86)
+- **Pop OS 20.04 LTS**, Thinkpad X1 Carbon Gen7 (x86)
 - **Ubuntu 20.04 LTS**, Raspberry Pi 4 (aarch64)
 - **Ubuntu 18.04 LTS**, WSL2 on Windows 10 (x86)
-- **Pop OS 20.04 LTS**, Thinkpad X1 Carbon Gen7 (x86)
 
 Majority of it works out of the box, but some tweaks might be required:
 - coc-vim, yarn, and python support for vim might need extra steps
 - Previously existed personal configs and themes might require proper backups
-- Zsh plugins might require manual installation
 
 
 ## Transition
@@ -48,35 +62,9 @@ Majority of it works out of the box, but some tweaks might be required:
 Git submodules (dotbot and vim/zsh plugins) should be handled carefully during repo transition:
 - **dotbot**: `git submodule add https://github.com/anishathalye/dotbot dotbot`
 - **Vundle.vim**: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
-
-Installation of oh-my-zsh plugins:
-```
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
+- zsh plugins can handled in the installation script.
 
 
 ## Extra Notes
 
 "My own dotfiles have been open sourced, and parts of my configuration are inspired by other people’s dotfiles. However, my dotfiles are my own personal settings, and I understand every bit of code and configuration in there. That is important. There are some people who have forked my dotfiles, but I do not recommend that approach. Copying parts of my configuration, however, is encouraged! It’s best when you understand what you are using — that’s why I’ve tried to keep my dotfiles organized and well-commented." [link](https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/)
-
-
-## RocknRoll in Linux
-
-Standard procedure for pulling over a full-blown dev environment, using X1C7 + PopOS20.04:
-- Part I, Basics: 
-    - Check hardware and upgrade drivers to the latest version before install, setup BIOS properly
-    - Install clean system, check: keyboard, tracking, bluetooth, wifi, external display, fingerprint, battery, sleep/suspend, speaker and mic
-    - Appearance-wallpaper, display-100% (don't use fractional scaling), mouse and trackpad speed and natural scrolling
-    - Keyboard shortcuts: Switch applications: Ctrl+Tab, Switch windows of an application: Super+Tab, Close window: Ctrl+Q
-    - Firmware and OS upgrade if needed
-- Part II, Applications:
-    - ./roll to apt install packages
-    - ./rock to apply dotfiles
-    - Manually select colorscheme and settings for xfce4 terminal in preference
-    - Manually install gnome shell extentions and apply transparent top bar
-    - In tweaks, change theme to `Adwaita-dark`
-    - vim plugins and coc: `:PluginInstall; :CocInstall coc-python`
-
-

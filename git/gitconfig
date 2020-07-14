@@ -10,3 +10,7 @@
 	ui = true
 [alias]
 	lg = log --color --graph \n    --pretty=format:'%Cred%h%Creset \n    -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \n    --abbrev-commit
+[credential]
+	helper = store
+[core]
+	editor = vim

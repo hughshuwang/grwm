@@ -1,47 +1,15 @@
-#!/usr/bin/zsh
-# installation script for Linux
+#!/usr/bin/env bash
 
-# basic tools
-sudo apt update
-sudo apt install net-tools network-manager # nmcli device wifi
-sudo apt install ranger zsh curl git vim exuberant-ctags fzf highlight tmux nodejs yarn fwupd xcape
-sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo gnome-tweak-tool fprintd 
-sudo apt install code google-chrome-stable xfce4-terminal python3-setuptools
-easy_install trash-cli # easier cli trash tool from ranger
-curl -fsSL https://code-server.dev/install.sh | sh # code-server
-PATH="$HOME/.local/bin:$PATH" # password set in dotfiles
+set -e
 
-# zsh and oh-my-zsh and set as default
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-chsh -s $(which zsh) # change default shell as zsh
-# oh my zsh plugins, will be called in .zshrc in dotfiles
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+CONFIG="roll.yaml"
+DOTBOT_DIR="dotbot"
 
-# install .deb packages
-PACKAGES=($(ls -a | grep .deb))
-for PACKAGE in $PACKAGES; do sudo apt install "./debs/$PACKAGE" done
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# python
-# anaconda
-sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
-curl https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh --output anaconda.sh
-sha256sum anaconda.sh; bash anaconda.sh # /home/shu/anaconda
-# (base) environment shown, check conda list
+cd "${BASEDIR}"
+git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
+git submodule update --init --recursive "${DOTBOT_DIR}"
 
-# conda package management
-conda update conda
-conda update anaconda
-
-# gurobipy
-conda config --add channels http://conda.anaconda.org/gurobi
-conda install gurobi
-
-# pip installs
-pip install --upgrade pip
-pip install tensorflow-gpu torch torchvision cvxpy hydra-core optuna pytorch-lightning ipdb jupyter_contrib_nbextensions
-
-# julia
-
-# R
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
