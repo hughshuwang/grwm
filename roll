@@ -1,0 +1,104 @@
+#!/usr/bin/zsh
+# installation script for Linux
+
+# basic tools
+sudo apt update
+sudo apt install net-tools network-manager # nmcli device wifi
+sudo apt install ranger zsh curl git vim exuberant-ctags fzf highlight tmux nodejs yarn fwupd xcape
+sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo gnome-tweak-tool fprintd 
+sudo apt install code google-chrome-stable xfce4-terminal
+curl -fsSL https://code-server.dev/install.sh | sh # code-server
+
+# zsh and oh-my-zsh and set as default
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh) # change default shell as zsh
+# oh my zsh plugins, will be called in .zshrc in dotfiles
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# install .deb packages
+PACKAGES=($(ls -a | grep .deb))
+for PACKAGE in $PACKAGES; do
+    sudo apt install "./debs/$PACKAGE"
+done
+
+# python
+# anaconda
+sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+curl https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh --output anaconda.sh
+sha256sum anaconda.sh; bash anaconda.sh # /home/shu/anaconda
+# (base) environment shown, check conda list
+
+# check which python and which pip, should be the one in ~/anaconda3/bin/python & pip
+pip install numpy pandas scikit-learn 
+conda update conda # optional 
+conda update anaconda # optional
+
+# tf and torch
+conda install tensorflow-gpu
+# cuda toolkit and cudnn automatically installed
+# pip install --upgrade --force-reinstall tensorflow-gpu # check
+# run tf.test.is_gpu_available(cuda_only=False, min_cuda_compute_capability=None) in python
+# conda install pytorch torchvision cudatoolkit=10.2 -c pytorch # not working very well
+pip install torch torchvision
+# torch.cuda.is_available()
+
+# get trash-cli
+sudo apt-get install python3-setuptools
+easy_install trash-cli
+
+# jupyter notebook
+jupyter notebook --no-browser --port=8008 # run on server
+# at local: ssh -N -f -L localhost:9999:localhost:8888 uesr@address
+#   visit localhost:9999 to get online notebook
+# can upload files here pretty quick
+# same technique for using tensorboard!
+
+# vscode server # https://github.com/cdr/code-server
+curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+curl -fsSL https://code-server.dev/install.sh | sh # actually install it!
+code-server
+
+# follow 'Let's Encrypt' in https://github.com/cdr/code-server/blob/master/doc/guide.md#1-acquire-a-remote-machine
+echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" \
+    | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+sudo apt update
+sudo apt install caddy
+
+sudo vim /etc/caddy/Caddyfile
+# reverse_proxy 127.0.0.1:8080 # add this line, address for code-server
+sudo systemctl reload caddy
+# code-server --auth none # for testing
+vim ~/.config/code-server/config.yaml # change password
+# then we can just visit IP address and enter password for that
+# install plugins and etc...
+code-server
+# use earlier version of python plugin and disable any chrome plugin
+# python plugin 2020-02 works for vscode in code-server
+
+# set up ssh
+# keygen at local, copy pub key in target host .ssh/authenticated_keys
+# same at ipad, copy key generated and used for the host in host authkeys folder
+
+# TODO: tmux for keeping things running after quitting ssh
+
+# setup a new git repo
+# at local: git remote -v to check current remotes
+#   git remote rm <name> to remove remotes
+#   git remote add <name> user@address:path # require password
+#   git commit -m "comments"
+#   git push <name> # push updates to remote
+
+# extra packages for dl
+pip install hydra-core --upgrade
+pip install optuna pytorch-lightning ipdb
+
+
+
+
+
+
+# julia
+
+# R

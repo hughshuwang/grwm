@@ -25,6 +25,9 @@
     # ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom 
     # only link theme, for oh-my-zsh git mgmt
 
+    # xfce4 terminal
+    # gruvbox theme,  ~/.local/share/xfce4/terminal/colorschemes
+
     # git
     ~/.gitconfig: git/gitconfig
 
@@ -38,6 +41,12 @@
     ~/.config/cmus: config/cmus
     ~/.config/code-server: config/code-server
     ~/.config/karabiner_backup: remap/karabiner_backup # manual
+
+    # remap (under x11 using xmodmap and xcape
+    ~/.xmodmap.config: remap/xmodmap_backup/xmodmap.config
+    ~/.xmodmap.sh: remap/xmodmap_backup/xmodmap.sh
+    ~/.config/autostart/xmodmap.deskop: remap/xmodmap_backup/xmodmap.desktop
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
