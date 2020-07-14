@@ -28,6 +28,10 @@
     # xfce4 terminal
     # gruvbox theme,  ~/.local/share/xfce4/terminal/colorschemes
 
+    # code-server
+    # ~/.config/code-server/config.yaml
+    # plugins: gruvbox, vim, python
+ 
     # git
     ~/.gitconfig: git/gitconfig
 
