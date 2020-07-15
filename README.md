@@ -14,7 +14,7 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 This customized set includes two parts: 
 - **Rock**: Shell scripts for core toolkit and env installation
 - **Roll**: Dotfiles applying personal configs \& themes for:
-  - **ishell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
+  - **shell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
   - **editor-related**: vim, vundle, code-server 
   - **dev-related**: git, ipython, jupyter (vim-jupyter) 
   - **file manager and monitor**: ranger, htop 
@@ -32,7 +32,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
   - For MBP, in display select FHD resolution with 100% scaling, disable hi-res daemon
 - **Part II, software**:
   - `cd ~; git clone https://github.com/hughshuwang/grwm; cd grwm` 
-  - `./rock`, switch to xfce4-term; `./roll` to after selecting kb conf file, reboot
+  - `./rock`, switch to xfce4-term; `./roll` after selecting xmodmap conf in roll.conf, reboot
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
   - `git config --global credential.helper store` then `git pull/push` to enter credentials
   - `:PluginInstall` in vim, `cd ~/.vim/bundle/YouCompleteMe; python3 install.py`
@@ -60,4 +60,3 @@ This toolbox has been tested in the following environments:
 Git submodules (dotbot and vim/zsh plugins) should be handled carefully during repo transition:
 - **dotbot**: `git submodule add https://github.com/anishathalye/dotbot dotbot`
 - **Vundle.vim**: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
-- zsh plugins can handled in the installation script.
