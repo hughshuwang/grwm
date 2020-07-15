@@ -134,6 +134,7 @@ export LANG=en_US.UTF-8
 alias vf='vim $(fzf)'
 alias cf='cd $(fzf)'
 alias lsa='ls -a'
+alias open='xdg-open'
 
 alias vv='vim'
 alias cl='clear'

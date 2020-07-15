@@ -30,5 +30,9 @@ sudo apt install typora
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# copy xmodmap.desktop
+mkdir -p ~/.config/autostart
+cp ./remap/xmodmap_backup/xmodmap.desktop ~/.config/autostart
+
 # show sys info
 neofetch # showit!
