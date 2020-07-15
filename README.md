@@ -3,7 +3,7 @@
 **Sync fast and live the immortal \& elegant CLI-powered UNIX lifestyle!**  
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
-*v1.0 (July 15, 2020): SOP works out-of-the-box on a fresh Linux install and takes <30m.*
+*v1.0 (July 15, 2020): SOP works out-of-the-box and takes <30m from flashing to done.*
 
 
 ![screenshot](./assets/screenshot.png)
@@ -26,11 +26,10 @@ Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gr
 ## SOP
 
 Starting from a clean install, assuming a Debian-based system and a GNOME-based DE:
-- **Part I, hardware**:
-  - BIOS and drivers. (kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker and mic) 
+- **Basics:**
+  - BIOS and drivers: kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
   - For MBP, in display select FHD resolution with 100% scaling, disable hi-res daemon
-- **Part II, software**:
   - `cd ~; git clone https://github.com/hughshuwang/grwm; cd grwm` 
   - `./rock`, switch to xfce4-term; `./roll` after selecting xmodmap conf in roll.conf, reboot
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
@@ -40,7 +39,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
   - In chrome, install gnome shell extentions and apply transparent top bar 
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
   - For extra packages, `sudo zsh ./debs/install.sh`
-- **Part III, Python/Anaconda**:
+- **Python/Anaconda**:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
   - Run `python python_test.py` to test python environment, (base) auto-loaded
 
