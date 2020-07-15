@@ -3,6 +3,7 @@
 # basic tools
 sudo apt update
 sudo apt install net-tools network-manager # nmcli device wifi
+sudo apt install build-essential cmake python3-dev # pre for ycmd
 sudo apt install ranger zsh curl git vim exuberant-ctags fzf highlight tmux nodejs yarn fwupd xcape htop
 sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo gnome-tweak-tool fprintd neofetch
 sudo apt install code google-chrome-stable xfce4-terminal python3-setuptools
@@ -14,15 +15,20 @@ PATH="$HOME/.local/bin:$PATH" # password set in dotfiles
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh) # change default shell as zsh
 
-# typora
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-sudo apt install typora
-
 # oh my zsh plugins, will be called in .zshrc in dotfiles
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # apply rock setup immediately after this and reboot
 
+# typora
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt install typora
+
+# nodejs
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# show sys info
 neofetch # showit!

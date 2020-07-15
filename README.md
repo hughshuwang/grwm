@@ -26,13 +26,14 @@ Starting from a clean Linux install, assuming a Debian-based system and a GNOME-
   - For MBP, in display select low resolution with 100% scaling, disable hi-res daemon
 - Part II, software:
   - `sudo apt install git; cd ~; git clone https://github.com/hughshuwang/dotfiles; cd dotfiles` 
-  - `./rock` twice and switch to xfce4-term, 
+  - `./rock`, switch to xfce4-term, now zsh should be default, if not `chsh -s $(which zsh)` 
   - `./roll` to deploy dotfiles after selecting keyboard conf file, copy xmodmap.desktop, reboot
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
   - `git config --global credential.helper store` then `git pull/push` and enter credentials to save 
-  - `:PluginInstall` in vim, xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.90
+  - `:PluginInstall` in vim, for ycmd `cd ~/.vim/bundle/YouCompleteMe; python3 install.py`
+  - xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.90
   - In chrome, install gnome shell extentions and apply transparent top bar 
-  - In tweaks, change theme to `Adwaita-dark`, for MBP, better live with command as super
+  - In tweaks, change theme to `Adwaita-dark`
   - In ./debs, `sudo zsh ./install.sh`
 - Part III, Python/Anaconda:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
@@ -40,7 +41,8 @@ Starting from a clean Linux install, assuming a Debian-based system and a GNOME-
   - Everytime after restart a (base) environment should automatically loaded 
 - TODOs:
   - Share clipboard and vim copy to terminal
-  - coc support in vim
+  - Auto-completion: coc not working, using ycmd, using sudo apt install vim-youcompleteme; vim-addon-manager install youcompleteme not working, following offcial guidelines
+  - ycmd install: 
 
 
 ## Tests

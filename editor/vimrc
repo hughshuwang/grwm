@@ -148,14 +148,14 @@ Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 " COC
 " Use release branch (recommend)
 " Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-" Or build from source code by using yarn: https://yarnpkg.com
-" Plugin 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 " run :CocInstall coc-python " after sourcing and check jedi version 
-" no need for vim jedi plugin
+
+" YCM
+Plugin 'ycm-core/YouCompleteMe'
 
 " fzf
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'"
+Plugin 'junegunn/fzf.vim'
 
 " python repl support " NOT WORKING
 " Plugin 'rhysd/reply.vim'
