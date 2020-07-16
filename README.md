@@ -3,7 +3,7 @@
 **Sync fast and live the immortal \& elegant CLI-powered UNIX lifestyle!**  
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
-*v1.0 (July 15, 2020): SOP works out-of-the-box and takes <30m from flashing to done.*
+*v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m from flashing to done.*
 
 
 ## Repertoire
@@ -27,13 +27,15 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
   - BIOS and drivers: kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
   - For MBP, in display select FHD resolution with 100% scaling, disable hi-res daemon
+  - Apply any software updates from system shop
   - `cd ~; git clone https://github.com/hughshuwang/grwm; cd grwm` 
-  - `./rock`, switch to xfce4-term; `./roll` after selecting xmodmap conf in roll.conf, reboot
+  - `./rock`, in the middle, get in zsh, exit to finish the rest, switch to xfce4-term when done
+  - `./roll` after selecting the correct (win/mac) xmodmap conf in roll.conf, reboot/relogin
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
   - `git config --global credential.helper store` then `git pull/push` to enter credentials
-  - `:PluginInstall` in vim, `cd ~/.vim/bundle/YouCompleteMe; python3 install.py`
-  - xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.95
-  - In chrome, install gnome shell extentions and apply transparent top bar 
+  - `:PluginInstall` in vim, `python3 ~/.vim/bundle/YouCompleteMe/install.py` to build ycmd
+  - xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.95, diable scroll bar
+  - In chrome, install gnome shell extentions and apply transparent top bar, add input source
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
   - For extra packages, `sudo zsh ./debs/install.sh`
 - **Python/Anaconda**:
