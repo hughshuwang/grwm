@@ -6,9 +6,6 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 *v1.0 (July 15, 2020): SOP works out-of-the-box and takes <30m from flashing to done.*
 
 
-![screenshot](./assets/screenshot.png)
-
-
 ## Repertoire
 
 This customized set includes two parts: 

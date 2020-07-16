@@ -17,7 +17,6 @@
     ~/.vim/filetype.vim: editor/vim/filetype.vim
 
     # shell
-    ~/.bash_profile: shell/bash_profile
     ~/.profile: shell/profile
     ~/.tmux.conf: shell/tmux.conf
     ~/.zshrc: shell/zshrc
