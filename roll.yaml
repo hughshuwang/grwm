@@ -40,14 +40,12 @@
     ~/.config/htop: config/htop
     ~/.config/cmus: config/cmus
     ~/.config/code-server: config/code-server # gruvbox, python, vim
-    ~/.config/karabiner_backup: remap/karabiner_backup # manual
+    ~/.config/karabiner_backup: remap/karabiner # manual
 
     # remap (under x11 using xmodmap and xcape
-    # ~/.xmodmap.conf: remap/xmodmap_backup/xmodmap_win.conf
-    ~/.xmodmap.conf: remap/xmodmap_backup/xmodmap_mac.conf
-    ~/.xmodmap.sh: remap/xmodmap_backup/xmodmap.sh
-    # ~/.config/autostart/xmodmap.deskop: remap/xmodmap_backup/xmodmap.desktop
-    # manual copy required, link won't work
+    # ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
+    ~/.xmodmap.conf: remap/xmodmap/xmodmap_mac.conf
+    ~/.xmodmap.sh: remap/xmodmap/xmodmap.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

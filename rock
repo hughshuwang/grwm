@@ -32,7 +32,7 @@ sudo apt-get install -y nodejs
 
 # copy xmodmap.desktop
 mkdir -p ~/.config/autostart
-cp ./remap/xmodmap_backup/xmodmap.desktop ~/.config/autostart
+cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart
 
 # show sys info
 neofetch # showit!
