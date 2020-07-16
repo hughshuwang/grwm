@@ -41,6 +41,14 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
 - **Python/Anaconda**:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
   - Run `python python_test.py` to test python environment, (base) auto-loaded
+- **APFS**:
+  - Run `sudo zsh ./apfs` to install dependensies
+  - `git clone https://github.com/sgan81/apfs-fuse.git; cd apfs-fuse`
+  - `git submodule init; git submodule update`
+  - `mkdir build; cd build; cmake ..;` and `ccmake ..` turn FUSE 3.0 OFF
+  - `make`, then run `sudo ./apfs-fuse <device> /mnt/` to mount
+  - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
+  - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
 
 ## Whitelist
