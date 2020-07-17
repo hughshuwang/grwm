@@ -16,7 +16,8 @@ set number relativenumber
 set nonumber norelativenumber " turn hybrid line numbers off
 set number! relativenumber!   " toggle hybrid line numbers
 
-set ts=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set modifiable
@@ -34,7 +35,7 @@ let mapleader = "\<space>"
 
 " share clipboard with macOS
 " used for paste to terminal for REPL
-set clipboard=unnamed
+set clipboard=unnamedplus
 " set foldmethod=marker
 
 " NERDTree setups
@@ -70,10 +71,6 @@ nmap wm :WMToggle<CR>
 
 " quitting
 nnoremap <leader>q :q<CR>
-
-" shared clipboard
-noremap <Leader>y "+y
-noremap <Leader>p "+p
 
 " highlight searching
 nnoremap <leader>/ :set hlsearch!<CR>
