@@ -14,7 +14,8 @@ This customized set includes two parts:
   - **shell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
   - **editor-related**: vim, vundle, code-server 
   - **dev-related**: git, ipython, jupyter (vim-jupyter) 
-  - **file manager and monitor**: ranger, htop 
+  - **file manager and monitor**: ranger, htop, apfs
+  - **DE-related**: GNOME3, xfce4-terminal, i3-wm, i3-status
   - **remappers:** karabiner, autohotkey, HHKB-YD binary, xmodmap
 
 Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gruvbox](https://github.com/morhetz/gruvbox)
