@@ -17,9 +17,10 @@
     ~/.vim/filetype.vim: editor/vim/filetype.vim
 
     # shell
+    ~/.zshrc: shell/zshrc
     ~/.profile: shell/profile
     ~/.tmux.conf: shell/tmux.conf
-    ~/.zshrc: shell/zshrc
+    ~/.config/xfce4/terminal/terminalrc: shell/xfce4-term.conf
     ~/.oh-my-zsh/custom/themes/custom.zsh-theme: shell/custom.zsh-theme
     # ~/.oh-my-zsh/custom: shell/oh-my-zsh/custom 
     # only link theme, for oh-my-zsh git mgmt
@@ -46,6 +47,10 @@
     # ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
     ~/.xmodmap.conf: remap/xmodmap/xmodmap_mac.conf
     ~/.xmodmap.sh: remap/xmodmap/xmodmap.sh
+
+    # i3
+    ~/.config/i3/config: i3/i3.config
+    ~/.config/i3status/config: i3/i3status.config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -135,6 +135,7 @@ alias vf='vim $(fzf)'
 alias cf='cd $(fzf)'
 alias lsa='ls -a'
 alias open='xdg-open'
+alias fl='fdisk -l'
 
 alias vv='vim'
 alias cl='clear'

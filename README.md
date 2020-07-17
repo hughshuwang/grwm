@@ -27,14 +27,12 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
   - BIOS and drivers: kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
   - For MBP, in display select FHD resolution with 100% scaling, disable hi-res daemon
-  - Apply any software updates from system shop
   - `cd ~; git clone https://github.com/hughshuwang/grwm; cd grwm` 
   - `./rock`, in the middle, get in zsh, exit to finish the rest, switch to xfce4-term when done
   - `./roll` after selecting the correct (win/mac) xmodmap conf in roll.conf, reboot/relogin
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
   - `git config --global credential.helper store` then `git pull/push` to enter credentials
   - `:PluginInstall` in vim, `python3 ~/.vim/bundle/YouCompleteMe/install.py` to build ycmd
-  - xfce4-terminal: 110 * 50, Fira Mono 11, xwidth 1.1, transparency 0.95, diable scroll bar
   - In chrome, install gnome shell extentions and apply transparent top bar, add input source
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
   - For extra packages, `sudo zsh ./debs/install.sh`
@@ -49,6 +47,9 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
   - `make`, then run `sudo ./apfs-fuse <device> /mnt/` to mount
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
+- **i3**:
+  - Natural Scrolling: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"` to pointer and touchpad sections
+  - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
 
 
 ## Whitelist
