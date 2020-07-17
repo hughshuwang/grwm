@@ -51,6 +51,7 @@
     # i3
     ~/.config/i3/config: i3/i3.config
     ~/.config/i3status/config: i3/i3status.config
+    ~/.i3display.sh: i3/i3display.sh
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

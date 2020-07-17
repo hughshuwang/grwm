@@ -11,11 +11,11 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 This customized set includes two parts: 
 - **Rock**: Shell scripts for core toolkit and env installation
 - **Roll**: Dotfiles applying personal configs \& themes for:
-  - **shell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
   - **editor-related**: vim, vundle, code-server 
-  - **dev-related**: git, ipython, jupyter (vim-jupyter) 
   - **file manager and monitor**: ranger, htop, apfs
-  - **DE-related**: GNOME3, xfce4-terminal, i3-wm, i3-status
+  - **shell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
+  - **dev-related**: git, ipython, jupyter (vim-jupyter) 
+  - **DE-related**: GNOME3, xfce4-term, i3-wm, i3-status, gtk
   - **remappers:** karabiner, autohotkey, HHKB-YD binary, xmodmap
 
 Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gruvbox](https://github.com/morhetz/gruvbox)
@@ -51,6 +51,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME-based 
 - **i3**:
   - Natural Scrolling: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"` to pointer and touchpad sections
   - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
+  - `lxappearance` to select gtk themes `Adwaita-dark` or `arc-dark`, icons `pop`, and fonts
 
 
 ## Whitelist
