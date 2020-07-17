@@ -42,6 +42,7 @@
     ~/.config/cmus: config/cmus
     ~/.config/code-server: config/code-server # gruvbox, python, vim
     ~/.config/karabiner_backup: remap/karabiner # manual
+    ~/.config/neofetch/config.conf: config/neofetch/config.conf
 
     # remap (under x11 using xmodmap and xcape
     # ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
