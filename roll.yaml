@@ -48,6 +48,7 @@
     # ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
     ~/.xmodmap.conf: remap/xmodmap/xmodmap_mac.conf
     ~/.xmodmap.sh: remap/xmodmap/xmodmap.sh
+    ~/.xbindkeysrc: remap/xmodmap/xbindkeysrc
 
     # i3
     ~/.config/i3/config: i3/i3.config
