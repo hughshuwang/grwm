@@ -25,7 +25,7 @@ Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gr
 
 Starting from a clean install, assuming a Debian-based system and a GNOME-based DE:
 - **Basics:**
-  - BIOS and drivers: kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
+  - UEFI and drivers: disable Secure-Boot; check kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
   - For MBP, in display select FHD resolution with 100% scaling, disable hi-res daemon
   - `cd ~; git clone https://github.com/hughshuwang/grwm; cd grwm` 

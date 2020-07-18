@@ -10,6 +10,7 @@ set cmdheight=1
 set nocompatible
 set runtimepath+=~/.vim_runtime
 set encoding=utf-8
+set viminfo='20
 
 syntax enable
 set number relativenumber
@@ -96,6 +97,9 @@ nnoremap <leader>J <C-W>J
 nnoremap <leader>K <C-W>K
 nnoremap <leader>L <C-W>L
 nnoremap <leader>H <C-W>H
+
+" recent files
+nnoremap <leader>o :browse oldfiles<CR>
 
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>
