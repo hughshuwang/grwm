@@ -1,27 +1,35 @@
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
 
-" required by coc
+syntax enable
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+
+set expandtab
+set smartindent
+set autoindent
+
 set hidden
 set nobackup
+set noswapfile
 set nowritebackup
-set cmdheight=1
-
 set nocompatible
+set undofile
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set colorcolumn=80
+
+set cmdheight=1
 set runtimepath+=~/.vim_runtime
 set encoding=utf-8
 set viminfo='20
+set modifiable
 
-syntax enable
 set number relativenumber
 set nonumber norelativenumber " turn hybrid line numbers off
 set number! relativenumber!   " toggle hybrid line numbers
-
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set autoindent
-set modifiable
 
 set foldmethod=indent
 set foldlevel=99
@@ -31,11 +39,7 @@ set showmatch
 " split bar char fill
 set fillchars+=vert:\ 
 
-" leader key remap
-let mapleader = "\<space>"
-
-" share clipboard with macOS
-" used for paste to terminal for REPL
+" share clipboard with system
 set clipboard=unnamedplus
 " set foldmethod=marker
 
@@ -70,10 +74,14 @@ function! NERDTree_IsValid()
 endfunction
 nmap wm :WMToggle<CR>
 
-" quitting
-nnoremap <leader>q :q<CR>
+" gruvbox dark
+autocmd vimenter * colorscheme gruvbox
+set bg=dark
 
-" highlight searching
+" leader key remap
+let mapleader = "\<space>"
+
+nnoremap <leader>q :q<CR>
 nnoremap <leader>/ :set hlsearch!<CR>
 
 " Remap Escape to quit terminal normal
@@ -98,8 +106,9 @@ nnoremap <leader>K <C-W>K
 nnoremap <leader>L <C-W>L
 nnoremap <leader>H <C-W>H
 
-" recent files
 nnoremap <leader>o :browse oldfiles<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>gd :YouCompleter GoTo<CR>
 
 " nnoremap <C-J> <C-W><C-J>
 " nnoremap <C-K> <C-W><C-K>
@@ -115,29 +124,9 @@ nmap <leader>, :res -5<CR>
 nmap <leader>. :res +5<CR>
 filetype on " ON for TagList
 
-
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>" 
-
-try
-source ~/.vim_runtime/my_configs.vim
-catch
-endtry
-
-
-" COLORSCHEME SECTION "
-
-" gruvbox dark
-autocmd vimenter * colorscheme gruvbox
-set bg=dark
-
-" onehalfdark custom section
-" colorscheme onehalfdark
-" highlight Normal cterm=NONE ctermbg=234
-" highlight CursorLine cterm=NONE ctermbg=235
-" highlight LineNr cterm=NONE ctermbg=234
-" highlight VertSplit cterm=NONE ctermbg=234
 
 
 " VUNDLE PLUGIN SECTION "
@@ -147,91 +136,38 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-" vim game by the Primeagen :)
 Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-
-" COC
-" Use release branch (recommend)
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-" run :CocInstall coc-python " after sourcing and check jedi version 
-
-" YCM
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'mbbill/undotree'
 
-" fzf
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-
-" python repl support " NOT WORKING
-" Plugin 'rhysd/reply.vim'
-
-" jupyter support " NOT WORKING
-" Plugin 'jupyter-vim/jupyter-vim'
-"
 Plugin 'jpalardy/vim-slime'
 Plugin 'hanschen/vim-ipython-cell'
 
-" Vim-codefmt
-" Add maktaba and codefmt to the runtimepath.
-" (The latter must be installed before it can be used.)
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
-" Also add Glaive, which is used to configure codefmt's maktaba flags. See
-" `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
 
-" csv supports
 Plugin 'chrisbra/csv.vim'
-
-" Jedi python autocomplete
-" Plugin 'davidhalter/jedi-vim'
-
-" Grovbox
 Plugin 'morhetz/gruvbox'
 
-" Git Support
 Plugin 'tpope/vim-fugitive'
-
-" Quick Surround 
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" taglist on GitHub
 Plugin 'yegappan/taglist', {'rtp': 'vim/'}
 
-" one half colorscheme
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-
-" aux bar airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 " let g:airline_theme='onehalfdark' " third-party scheme
 let g:airline_theme='raven' " official airline scheme
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 " 'deus', 'angr', 'atomic', 'bubblegum', 'molokai', 'raven'
-
-" Plugin 'sillybun/vim-repl' " not usable, 051320
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " NERDTree
 Plugin 'preservim/nerdtree'
@@ -247,9 +183,8 @@ autocmd FileType nerdtree setlocal relativenumber
 
 let python_highlight_all=1
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-" filetype plugin indent on    " required
+call vundle#end()
 
+" filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 filetype plugin on
