@@ -19,7 +19,7 @@ set undofile
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set colorcolumn=80
+" set colorcolumn=80
 
 set cmdheight=1
 set runtimepath+=~/.vim_runtime
