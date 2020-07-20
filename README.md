@@ -1,6 +1,6 @@
 # Get-Ready-with-Me! 🤩
 
-**Sync fast and live the immortal \& elegant GNU/Linux lifestyle! 🥰**  
+**Sync fast and live the immortal \& elegant GNU/Linux lifestyle!**  
 ***@debian @vim @i3wm @zsh @ranger @xfce4-terminal @vscode @hhkb***  
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
@@ -12,11 +12,12 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 
 
 
-## TODO 🤔
+## TODO
 
 This repo will only focus on Linux going forward and will be maintained as a long-term project.
 
 Priorities are shown as below:
+- DAW (bitwig), MIDI, and guitar support, lilypond
 - Test raw Arch Linux ARM + i3-wm on Raspberry Pi 4
 - i3blocks status bar customization
 - Auto-adjust screen resolution and dpi after login
@@ -24,7 +25,7 @@ Priorities are shown as below:
 
 
 
-## Repertoire 🗂
+## Repertoire
 
 This customized set includes two parts: 
 - **Rock**: Shell scripts for core toolkit and env installation
@@ -40,7 +41,7 @@ Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gr
 
 
 
-## SOP 🧸
+## SOP
 
 Starting from a clean install, assuming a Debian-based system and a GNOME3-based DE:
 - **Basics:**
@@ -74,7 +75,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
 
 
 
-## Whitelist 🔮
+## Whitelist
 
 This toolbox has been tested in the following environments:
 - **Darwin**, macOS Catalina 10.15.5 (x86)
@@ -85,7 +86,7 @@ This toolbox has been tested in the following environments:
 
 
 
-## Transition ⛓
+## Transition
 
 Git submodules (dotbot and vim/zsh plugins) should be handled carefully during repo transition:
 - **dotbot**: `git submodule add https://github.com/anishathalye/dotbot dotbot`

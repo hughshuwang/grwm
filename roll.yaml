@@ -53,6 +53,7 @@
     # i3
     ~/.config/i3/config: i3/i3.config
     ~/.config/i3status/config: i3/i3status.config
+    ~/.config/i3blocks/config: i3/i3blocks.config
     # ~/.i3display.sh: i3/i3display.sh
     ~/.config/compton.conf: i3/compton.conf
 
