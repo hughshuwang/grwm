@@ -1,0 +1,10 @@
+swipe:
+  3:
+    left:
+      command: "xdotool key super+h"
+    right:
+      command: "xdotool key super+l"
+    up:
+      command: "xdotool key super+k"
+    down:
+      command: "xdotool key super+j"

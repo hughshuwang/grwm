@@ -37,5 +37,10 @@ sudo apt-get install -y nodejs
 mkdir -p ~/.config/autostart
 cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart
 
+# fusuma
+sudo gpasswd -a $USER input
+sudo apt install libinput-tools ruby xdotool
+sudo gem install fusuma
+
 # show sys info
 neofetch # showit!
