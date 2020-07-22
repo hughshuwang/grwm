@@ -1,12 +1,12 @@
 # Get-Ready-with-Me! 🤩
 
 **Sync fast and live the immortal \& elegant GNU/Linux lifestyle!**  
-***@debian @vim @i3wm @zsh @ranger @xfce4-terminal @vscode @hhkb***  
+***@debian @vim @i3wm @zsh @ranger @xfce4-term @vscode @hhkb***  
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
 
 
-*v1.1 (July 19, 2020): Transition of main GUI environment from GNOME3 to i3wm.*  
+*v1.1 (July 22, 2020): Perfect experience with MBP A1502 + Pop!_OS 20.04 LTS + i3wm.*  
 *v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m from flashing to done.*
 
 
@@ -14,14 +14,12 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 
 ## TODO
 
-This repo will only focus on Linux going forward and will be maintained as a long-term project.
-
 Priorities are shown as below:
-- DAW (bitwig), MIDI, and guitar support, lilypond
-- Test raw Arch Linux ARM + i3-wm on Raspberry Pi 4
-- i3blocks status bar customization
+- LAMP infrastructure
+- DAW (bitwig), MIDI, audio interface, and electric guitar support, lilypond
+- Test raw Manjaro ARM + i3wm on Pi 4
 - Auto-adjust screen resolution and dpi after login
-- External display (4K) support
+- External/multiple display (4K) support
 
 
 
@@ -30,12 +28,12 @@ Priorities are shown as below:
 This customized set includes two parts: 
 - **Rock**: Shell scripts for core toolkit and env installation
 - **Roll**: Dotfiles applying personal configs \& themes for:
-  - **editor-related**: vim, vundle, code-server 
+  - **editor-related**: vim, vundle, ycmd, etc.
   - **file manager and monitor**: ranger, htop, apfs
   - **shell-related**: bash, zsh, oh-my-zsh, tmux, cmus 
-  - **dev-related**: git, ipython, jupyter (vim-jupyter) 
-  - **DE-related**: GNOME3, xfce4-term, i3-wm, i3-status, gtk
-  - **remappers:** karabiner, autohotkey, HHKB-YD binary, xmodmap
+  - **dev-related**: git, ipython, jupyter (vim-jupyter), vscode, code-server
+  - **DE/WM**: GNOME3, xfce4-term, i3wm, i3status, gtk3, fusuma, compton
+  - **remappers:** karabiner, autohotkey, HHKB-YD hardware binary, xmodmap
 
 Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gruvbox](https://github.com/morhetz/gruvbox)
 
@@ -43,7 +41,7 @@ Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gr
 
 ## SOP
 
-Starting from a clean install, assuming a Debian-based system and a GNOME3-based DE:
+Starting from a clean install, assuming a Debian-based system:
 - **Basics:**
   - UEFI and drivers: disable Secure-Boot; check kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
@@ -57,8 +55,6 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
   - In chrome, install gnome shell extentions and apply transparent top bar, add input source
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
   - For extra packages, `sudo zsh ./debs/install.sh`, more: WPS, Teams, Teamviewer
-  - Running MS Teams in chrome requiring "allowing third party cookies"
-  - Lid suspend/sleep: set `HandlePowerKey`, `HandleLidSwitch`, `IdleAction`, etc. in `/etc/systemd/logind.conf`, [ref](https://www.reddit.com/r/i3wm/comments/5g86f1/suspend_on_lid_close/)
 
 - **Python/Anaconda**:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
@@ -73,21 +69,23 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
-- **i3**:
-  - Natural Scrolling: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"; Option "Tapping" "on"; Option "TappingDrag" "on"` to touchpad sections
-  - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
-  - `lxappearance` to select gtk themes `Adwaita-dark` or `arc-dark`, icons `pop`, and fonts
 
 
 
-## Whitelist
+## Problems Solved
 
-This toolbox has been tested in the following environments:
-- **Darwin**, macOS Catalina 10.15.5 (x86)
-- **Debian 10 Buster**, GCP Compute Engine (x86)
-- **Pop OS 20.04 LTS**, Thinkpad X1 Carbon Gen7 (x86)
-- **Ubuntu 20.04 LTS**, Raspberry Pi 4 (aarch64)
-- **Ubuntu 18.04 LTS**, WSL2 on Windows 10 (x86)
+A list of obstacles I didn't expect:
+- Running MS Teams in chrome requiring "allowing third party cookies"
+- Lid suspend/sleep: set `HandlePowerKey`, `HandleLidSwitch`, `IdleAction`, etc. in `/etc/systemd/logind.conf`, [ref](https://www.reddit.com/r/i3wm/comments/5g86f1/suspend_on_lid_close/)
+- Natural Scrolling, tapping for click, and tap and hold for dragging: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"; Option "Tapping" "on"; Option "TappingDrag" "on"` to touchpad sections
+- Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
+- System-wise GUI appearance: use `lxappearance` to select gtk themes `Adwaita-dark` or `arc-dark`, icons `pop`, and fonts
+
+
+
+## Compatibility
+
+Before v1.1, this toolbox worked out-of-the-box for macOS 10.15 Catalina, Debian 10 Buster, and Ubuntu 20.04/18.04 LTS in x86 and aarch64 machines. As I switched my personal system completely from macOS to Linux (and then from GNOME3 to i3wm) at v1.1, this repo would only focus on Debian-based GNU/Linux family + i3wm going forward.
 
 
 
