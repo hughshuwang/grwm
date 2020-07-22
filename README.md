@@ -58,6 +58,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
   - For extra packages, `sudo zsh ./debs/install.sh`, more: WPS, Teams, Teamviewer
   - Running MS Teams in chrome requiring "allowing third party cookies"
+  - Lid suspend/sleep: set `HandlePowerKey`, `HandleLidSwitch`, `IdleAction`, etc. in `/etc/systemd/logind.conf`, [ref](https://www.reddit.com/r/i3wm/comments/5g86f1/suspend_on_lid_close/)
 
 - **Python/Anaconda**:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
