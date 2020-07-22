@@ -1,36 +1,35 @@
-## TODOs
+## GBQBf
 
-- Household analysis (new)
-    - New accounts
-    - Reanlaysis requests
+- Ubhfrubyq nanylfvf (arj)
+    - Arj nppbhagf
+    - Ernaynlfvf erdhrfgf
 
+- Thebov-Gnk grez eryngrq raunaprzragf:
+    - Gnk ybgf cevbevgvrf, gnk ybgf cersrerapr
+    - Gnk Zngevk zrgubq, fcernqfurrgf ol Eniv 
+    - Phfgbqvna fcrpvsvp ehyrf, UVPB (qrsnhyg) naq SVSB (byqrfg ybgf fbyq svefg)
+    - Vasyngrq gnk engrf nqwhfgzragf sbe ybat/fubeg-grez cersrerapr 
+    - Zretr vasyngrq gnk engrf naq gur phfgbz **cevbevgvrf**?
+    - <cebp_cerbcg>: nqq qngn fhccbeg gb ybgf; <bcgvzvmr_teo>: nqq zbqry pbzcbaragf
 
-- Gurobi-Tax term related enhancements:
-    - Tax lots priorities, tax lots preference
-    - Tax Matrix method, spreadsheets by Ravi 
-    - Custodian specific rules, HICO (default) and FIFO (oldest lots sold first)
-    - Inflated tax rates adjustments for long/short-term preference 
-    - Merge inflated tax rates and the custom priorities?
-    - <proc_preopt>: add data support to lots; <optimize_grb>: add model components
+- Vavgvny cbvag/thrff sbe fbyivat
+    - Ubj gb rzorq guvf cer-cebprffvat? Gvpxref QS
+    - Erivrj bs frghcf va Thebov naq qbpf sebz ynfg lrne'f zngrevnyf va Ngynagn
 
-- Initial point/guess for solving
-    - How to embed this pre-processing? Tickers DF
-    - Review of setups in Gurobi and docs from last year's materials in Atlanta
+- FZNEG Tbnyf:
+    - Znxr gur genafvgvba gb Thebov, zbivat gb cebqhpgvba
+    - Raunaprzragf ba Thebov, zber ba ebohfgarff, fvzhyngvba, gnk grezf
+    - Znxr Thebov snfg naq ebohfg sbe fvzhyngvba senzrjbex
 
-- SMART Goals:
-    - Make the transition to Gurobi, moving to production
-    - Enhancements on Gurobi, more on robustness, simulation, tax terms
-    - Make Gurobi fast and robust for simulation framework
+- Guhefqnl zbivat bhg, gnxr n qnl bss
 
-- Thursday moving out, take a day off
+- ZQ va DQ?
+    - YNZC sbe jro-onfrq nccyvpngvba
+    - Fpnynoyr, hfr ZlFDY naq Yvahk freire gb fhccbeg gur pbzcrgvgvba
 
-- MD in QD?
-    - LAMP for web-based application
-    - Scalable, use MySQL and Linux server to support the competition
-
-- Code refactoring (PENDING)
-- Tax-aware cash withdrawal (PENDING)
-- Auto exploration: outside data pipelines (PENDING)
-- BBS Wash-sales (PENDING)
-- Parameters tuning for robustness (DONE)
+- Pbqr ersnpgbevat (CRAQVAT)
+- Gnk-njner pnfu jvguqenjny (CRAQVAT)
+- Nhgb rkcybengvba: bhgfvqr qngn cvcryvarf (CRAQVAT)
+- OOF Jnfu-fnyrf (CRAQVAT)
+- Cnenzrgref ghavat sbe ebohfgarff (QBAR)
 

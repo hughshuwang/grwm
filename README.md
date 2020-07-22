@@ -56,10 +56,13 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
   - `:PluginInstall` in vim, `python3 ~/.vim/bundle/YouCompleteMe/install.py` to build ycmd
   - In chrome, install gnome shell extentions and apply transparent top bar, add input source
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
-  - For extra packages, `sudo zsh ./debs/install.sh`, more: WPS
+  - For extra packages, `sudo zsh ./debs/install.sh`, more: WPS, Teams, Teamviewer
+  - Running MS Teams in chrome requiring "allowing third party cookies"
+
 - **Python/Anaconda**:
   - Run `chmod +x python_install.sh` and `./python_install.sh` twice (restart shell in between)
   - Run `python python_test.py` to test python environment, (base) auto-loaded
+
 - **APFS**:
   - Run `sudo zsh ./apfs` to install dependensies
   - `git clone https://github.com/sgan81/apfs-fuse.git; cd apfs-fuse`
@@ -68,6 +71,7 @@ Starting from a clean install, assuming a Debian-based system and a GNOME3-based
   - `make`, then run `sudo ./apfs-fuse <device> /mnt/` to mount
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
+
 - **i3**:
   - Natural Scrolling: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"; Option "Tapping" "on"; Option "TappingDrag" "on"` to touchpad sections
   - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
