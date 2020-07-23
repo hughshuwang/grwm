@@ -69,6 +69,12 @@ Starting from a clean install, assuming a Debian-based system:
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
+- **LAMP**:
+  - `sudo apt install apache2`
+  - `sudo ufw <args>` for firewall management
+  - `sudo systemctl status apache2`
+  - TBC:
+    - How to call mysql 
 
 
 

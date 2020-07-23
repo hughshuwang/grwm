@@ -140,7 +140,12 @@ alias fl='fdisk -l'
 alias vv='vim'
 alias cl='clear'
 alias rr='ranger'
+
 alias tt='tmux'
+alias tta='tmux attach -t'
+alias ttk='tmux kill-server'
+alias ttl='tmux ls'
+
 alias qq='exit'
 alias tp='trash-put'
 alias tl='trash-list'
