@@ -69,6 +69,11 @@ Starting from a clean install, assuming a Debian-based system:
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
+- **i3 for Pi4**:
+  - `sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; sudo reboot`
+  - `sudo apt-get install --no-install-recommends xserver-xorg xinit; sudo reboot`
+  - `sudo apt-get install i3; sudo startx`
+
 - **LAMP**:
   - `sudo apt install apache2`
   - `sudo ufw <args>` for firewall management
