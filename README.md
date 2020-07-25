@@ -69,10 +69,13 @@ Starting from a clean install, assuming a Debian-based system:
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
-- **i3 for Pi4**:
-  - `sudo apt-get update; sudo apt-get upgrade; sudo apt-get dist-upgrade; sudo reboot`
+- **Pi4**:
+  - Using raspbian lite 32 official image and etcher for direct sd flashing, `pi; raspberry` to login
+  - `sudo raspi-config` get wifi connected and configs saved, resolution of console, locale, keyboard
+  - `sudo apt-get update; sudo apt-get upgrade; sudo reboot`
   - `sudo apt-get install --no-install-recommends xserver-xorg xinit; sudo reboot`
-  - `sudo apt-get install i3; sudo startx`
+  - `sudo apt-get install i3; startx`
+  - Go for x86 SOP multiple times
 
 - **LAMP**:
   - `sudo apt install apache2`

@@ -15,7 +15,7 @@ PATH="$HOME/.local/bin:$PATH" # password set in dotfiles
 # input setup manually added in chrome
 
 # zsh and oh-my-zsh and set as default
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh) # change default shell as zsh
 
 # oh my zsh plugins, will be called in .zshrc in dotfiles

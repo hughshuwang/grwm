@@ -18,7 +18,7 @@
 
     # shell
     ~/.zshrc: shell/zshrc
-    ~/.profile: shell/profile
+    # ~/.profile: shell/profile
     ~/.tmux.conf: shell/tmux.conf
     ~/.config/xfce4/terminal/terminalrc: shell/xfce4-term.conf
     ~/.oh-my-zsh/custom/themes/custom.zsh-theme: shell/custom.zsh-theme
