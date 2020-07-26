@@ -5,7 +5,7 @@
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
 
-
+*v1.2 (July 26, 2020): Perfect experience with Raspberry Pi 4B + Manjaro ARM KDE Plasma *  
 *v1.1 (July 22, 2020): Perfect experience with MBP A1502 + Pop!_OS 20.04 LTS + i3wm.*  
 *v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m from flashing to done.*
 
