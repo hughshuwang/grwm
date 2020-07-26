@@ -69,20 +69,21 @@ Starting from a clean install, assuming a Debian-based system:
   - `sudo -s` and open file manager with `xdg-open /`, `umount /mnt/` when it's done
   - More info see [ref](https://github.com/sgan81/apfs-fuse)
 
-- **Pi4**:
-  - Using raspbian lite 32 official image and etcher for direct sd flashing, `pi; raspberry` to login
-  - `sudo raspi-config` get wifi connected and configs saved, resolution of console, locale, keyboard
-  - `sudo apt-get update; sudo apt-get upgrade; sudo reboot`
-  - `sudo apt-get install --no-install-recommends xserver-xorg xinit; sudo reboot`
-  - `sudo apt-get install i3; startx`
-  - Go for x86 SOP multiple times
-
 - **LAMP**:
   - `sudo apt install apache2`
   - `sudo ufw <args>` for firewall management
   - `sudo systemctl status apache2`
   - TBC:
     - How to call mysql 
+
+- **Pi4**:
+  - Using raspbian lite 32 official image and etcher for direct sd flashing, `pi; raspberry` to login
+  - `sudo raspi-config` get wifi connected and configs saved, resolution of console, locale `en_US UTF-8`, keyboard
+  - `sudo apt-get update; sudo apt-get upgrade; sudo reboot`
+  - `sudo apt-get install --no-install-recommends xserver-xorg xinit; sudo reboot`
+  - `sudo apt-get install i3; startx`
+  - x server: error when running `startx`, [ref](https://www.raspberrypi.org/forums/viewtopic.php?t=171843)
+
 
 
 
@@ -108,3 +109,15 @@ Before v1.1, this toolbox worked out-of-the-box for macOS 10.15 Catalina, Debian
 Git submodules (dotbot and vim/zsh plugins) should be handled carefully during repo transition:
 - **dotbot**: `git submodule add https://github.com/anishathalye/dotbot dotbot`
 - **Vundle.vim**: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
+
+
+## Manjaro KDE on Pi4
+
+Standard procedure for Pi4 running officially supported Manjaro KDE
+- Bluetooth mouse, wifi, resolution.
+- Desktop environment shortcuts: Settings -> Window Mgmt -> All windows: Forward/Reverse
+- Global shortcuts: minimize/hide window (ctrl+h), toggle full screen (ctrl+shift+f)
+- `./rock_pi4` and then `./roll`
+
+
+
