@@ -15,8 +15,6 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 ## TODO
 
 Priorities are shown as below:
-- External/multiple display (4K) support
-- Magic Mouse/Trackpad driver install and scrolling
 - LAMP infrastructure
 - DAW (bitwig), MIDI, audio interface, and electric guitar support, lilypond
 - Auto-adjust screen resolution and dpi after login
@@ -95,6 +93,7 @@ A list of obstacles I didn't expect:
 - Natural Scrolling, tapping for click, and tap and hold for dragging: `sudo vim /usr/share/X11/xorg.conf.d/40-libinput.conf`, add `Option "NaturalScrolling" "on"; Option "Tapping" "on"; Option "TappingDrag" "on"` to touchpad sections
 - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
 - System-wise GUI appearance: use `lxappearance` to select gtk themes `Adwaita-dark` or `arc-dark`, icons `pop`, and fonts
+- For Magic Mouse 2, follow instructions in [ref](https://github.com/rohitpid/Linux-Magic-Trackpad-2-Driver), for speed run `xinput set-prop 10 307 -1.0`, follow [ref](https://www.reddit.com/r/i3wm/comments/4efbsm/mouse_speed/)
 
 
 
@@ -109,6 +108,7 @@ Before v1.1, this toolbox worked out-of-the-box for macOS 10.15 Catalina, Debian
 Git submodules (dotbot and vim/zsh plugins) should be handled carefully during repo transition:
 - **dotbot**: `git submodule add https://github.com/anishathalye/dotbot dotbot`
 - **Vundle.vim**: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
+
 
 
 ## Manjaro KDE on Pi4
