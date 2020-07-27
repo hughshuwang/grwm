@@ -15,11 +15,11 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 ## TODO
 
 Priorities are shown as below:
+- External/multiple display (4K) support
+- Magic Mouse/Trackpad driver install and scrolling
 - LAMP infrastructure
 - DAW (bitwig), MIDI, audio interface, and electric guitar support, lilypond
-- Test raw Manjaro ARM + i3wm on Pi 4
 - Auto-adjust screen resolution and dpi after login
-- External/multiple display (4K) support
 
 
 
