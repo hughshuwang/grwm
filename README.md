@@ -134,7 +134,17 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - Connect, `nmcli device wifi connect "NAME" password "PASSWD"`, reboot again, now we have auto-connect wifi
   - Change root passwd, get new user, sudo priv, change user passwd and sudo passwd
   - `sudo useradd -d /home/shu -m shu; sudo passwd shu` set user passwd, use this user going forward
-  - SOP in grwm `./rock_pi4_arch`
+  - SOP in grwm `chmod +x ./rock_pi4_arch; ./rock_pi4_arch`, then `./roll` to sync configs
+  - Change locale: `/etc/locale.gen`, activate en_US.UTF-8 and zh_CN.UTF-8, then `sudo locale-gen`, [ref](https://wiki.archlinux.org/index.php/Locale) `sudo vim /etc/locale.conf` change to `LANG=en_US.UTF-8`
+  - Change hostname: `hostnamectl set-hostname "pi"` and reboot
+  - `sudo vim /usr/share/gtk-2.0/gtkrc` alt theme and fonts    
+  - `sudo pacman -S gtk-chtheme` in lxappearance, choose default font as `Sans 10`
+
+
+  - TODO: gtk2 and 3 configs should put in ./roll, personal not requiring sudo
+  - TODO: change gtk font to sans for perfect terminal experience
+  - TODO: change theme to Adwaita-dark, config lxappearance
+
 
 - [Novaspirit blog, 2017](https://www.novaspirit.com/2017/04/25/installing-arch-linux-raspberry-pi/)
   - Some tools might not be available in 2020
