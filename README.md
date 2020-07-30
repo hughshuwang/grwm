@@ -142,6 +142,7 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - `sudo vim /usr/share/gtk-2.0/gtkrc` alt theme and fonts    
   - `sudo pacman -S gtk-chtheme` in lxappearance, choose default font as `Sans 10`
   - `/boot/config.txt`: `over_voltage=6; arm_freq=2000; gpu_freq=750; device_tree_param=audio=on` [ref](https://magpi.raspberrypi.org/articles/how-to-overclock-raspberry-pi-4)
+  - CPU temp: `sudo pacman -S raspberrypi-firmware`, and run `/opt/vc/bin/vcgencmd measure_temp`
   - Hardware [ref](https://archlinuxarm.org/wiki/Raspberry_Pi)
 
   - TODO: gtk2 and 3 configs should put in ./roll, personal not requiring sudo
