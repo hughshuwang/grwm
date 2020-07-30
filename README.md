@@ -5,6 +5,7 @@
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
 
+*v1.3 (July 30, 2020): Perfect experience with Overclocked Pi 4B + Arch Linux + i3wm.*  
 *v1.2 (July 26, 2020): Perfect experience with Raspberry Pi 4B + Manjaro ARM KDE Plasma.*  
 *v1.1 (July 22, 2020): Perfect experience with MBP A1502 + Pop!_OS 20.04 LTS + i3wm.*  
 *v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m from flashing to done.*
@@ -137,9 +138,11 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - SOP in grwm `chmod +x ./rock_pi4_arch; ./rock_pi4_arch`, then `./roll` to sync configs
   - Change locale: `/etc/locale.gen`, activate en_US.UTF-8 and zh_CN.UTF-8, then `sudo locale-gen`, [ref](https://wiki.archlinux.org/index.php/Locale) `sudo vim /etc/locale.conf` change to `LANG=en_US.UTF-8`
   - Change hostname: `hostnamectl set-hostname "pi"` and reboot
+  - For chromium, when installing plugins, run as `chromium --disable-seccomp-filter-sandbox`, then change exec in `i3.config` as `chromium`
   - `sudo vim /usr/share/gtk-2.0/gtkrc` alt theme and fonts    
   - `sudo pacman -S gtk-chtheme` in lxappearance, choose default font as `Sans 10`
-
+  - `/boot/config.txt`: `over_voltage=6; arm_freq=2000; gpu_freq=750; device_tree_param=audio=on` [ref](https://magpi.raspberrypi.org/articles/how-to-overclock-raspberry-pi-4)
+  - Hardware [ref](https://archlinuxarm.org/wiki/Raspberry_Pi)
 
   - TODO: gtk2 and 3 configs should put in ./roll, personal not requiring sudo
   - TODO: change gtk font to sans for perfect terminal experience
