@@ -1,0 +1,16 @@
+#!/bin/bash
+# arch+i3 version for pi4
+
+sudo pacman -Syu
+sudo pacman -S ranger zsh curl git vim fzf htop xcape tmux ctags neofetch python-pip
+sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-video-fbdev xorg-refresh i3-wm i3status
+sudo pacman -S chromium xfce4-terminal nautilus w3m
+sudo pacman -S ttf-dejavu noto-fonts-cjk # en and cn fonts, reboot after installing
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh) # change default shell as zsh
+
+# in vim :PluginInstall, python3 install ycmd server
+
+mkdir -p ~/.config/autostart
+cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart

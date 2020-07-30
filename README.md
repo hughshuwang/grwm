@@ -120,4 +120,27 @@ Standard procedure for Pi4 running officially supported Manjaro KDE
 - `./rock_pi4` and then `./roll`
 
 
+## Arch Linux on Pi4
+
+Standard procedure for Pi4 running offcially supported Arch Linux ARM
+- [Official Installation Guide](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4)
+  - Disk partition achieved in a separate Linux machine, after booting, login with root(root) (install sudo later)
+  - Add wifi auth to `/etc/wpa_supplicant` and connect using `wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/home_wifi &`
+  - Run dhcp and get ip addr by `dhcpcd wlan0`; check `/etc/resolv.conf`, *restart router* or dhcpcd if not working
+  - When `ping google.com` is set, go for `pacman -Syu`, and `pacman -S sudo screen`
+  - Sudo priv: `vi /etc/sudoers.d/custom`, add `alarm ALL=NOPASSWD: ALL`, then `su alarm`, `sudo pacman -S vim`
+  - Network: `sudo pacman -S wireless_tools networkmanager network-manager-applet` then reboot
+  - After reboot, log in, `sudo systemctl start NetworkManager.service; nmcli device wifi list`, [more](https://linuxhint.com/arch_linux_network_manager/)
+  - Connect, `nmcli device wifi connect "NAME" password "PASSWD"`, reboot again, now we have auto-connect wifi
+  - Change root passwd, get new user, sudo priv, change user passwd and sudo passwd
+  - `sudo useradd -d /home/shu -m shu; sudo passwd shu` set user passwd, use this user going forward
+  - SOP in grwm `./rock_pi4_arch`
+
+- [Novaspirit blog, 2017](https://www.novaspirit.com/2017/04/25/installing-arch-linux-raspberry-pi/)
+  - Some tools might not be available in 2020
+  - Wifi setup process works
+
+Trouble Shooting:
+- `ping google.com` -> `Name or service not known`, then `pacman -Syu` failed
+
 
