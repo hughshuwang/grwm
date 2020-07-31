@@ -7,9 +7,9 @@ sudo apt dist-upgrade
 sudo apt install net-tools network-manager build-essential cmake make gcc python3-dev jupyter-notebook
 sudo apt install ranger zsh curl git vim fzf htop xcape tmux ctags neofetch python-pip zip unzip nodejs yarn
 
-sudo apt install xorg i3 openbox 
-sudo apt install chromium  xfce4-terminal nautilus w3m lxappearance scrot compton feh rofi --fix-missing
-sudo apt install ttf-dejavu ttf-fira
+sudo apt install xorg i3 
+sudo apt install chromium xfce4-terminal nautilus w3m lxappearance scrot compton feh rofi --fix-missing
+sudo apt install fonts-dejavu fonts-firacode
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh) # change default shell as zsh
