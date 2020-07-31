@@ -149,3 +149,13 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - TODO: gtk2 and 3 configs should put in ./roll, personal not requiring sudo
   - TODO: change theme to Adwaita-dark, config lxappearance
 
+
+## RPiOS on Pi4
+
+Standard procedure for Pi4
+- Make a NOOBS sd card, `sudo fdisk /dev/sdb` and make a primary for the whole card with `mkfs.vfat`
+- `sudo mount /dev/sdb1 /mnt/sdb; sudo cp -r ~/Downloads/noobs/* /mnt/sdb`, then plugin to install
+- `sudo useradd -d /home/shu -m shu; sudo passwd shu` set pass, `vi /etc/sudoers.d/custom` add `shu ALL=NOPASSWD: ALL`, then su to shu and `sudo userdel pi`
+- git clone grwm then `./rock_pi4_pios`
+- Optional: reconnect wifi from nmcli
+

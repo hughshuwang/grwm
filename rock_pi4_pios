@@ -1,11 +1,15 @@
 #!/bin/bash
-# arch+i3 version for pi4
+# rock_pi4_pios
 
-sudo pacman -Syu
-sudo pacman -S ranger zsh curl git vim fzf htop xcape tmux ctags neofetch python-pip zip unzip cmake make gcc jupyter-notebook
-sudo pacman -S xorg-server xorg-xinit xorg-server-utils xf86-video-fbdev xorg-refresh i3-wm i3status
-sudo pacman -S chromium xfce4-terminal nautilus w3m lxappearance_obconf scrot compton feh rofi
-sudo pacman -S ttf-dejavu ttf-fira-mono noto-fonts-cjk # en and cn fonts, reboot after installing
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt install net-tools network-manager build-essential cmake make gcc python3-dev jupyter-notebook
+sudo apt install ranger zsh curl git vim fzf htop xcape tmux ctags neofetch python-pip zip unzip nodejs yarn
+
+sudo apt install xorg i3 openbox 
+sudo apt install chromium  xfce4-terminal nautilus w3m lxappearance scrot compton feh rofi --fix-missing
+sudo apt install ttf-dejavu ttf-fira
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh) # change default shell as zsh
@@ -15,8 +19,6 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # apply rock setup immediately after this and reboot
-
-# in vim :PluginInstall, python3 install ycmd server
 
 mkdir -p ~/.config/autostart
 cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart
