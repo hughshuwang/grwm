@@ -156,6 +156,9 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push origin master'
 
+alias kb='~/.xmodmap.sh'
+alias pict='/opt/vc/bin/vcgencmd measure_temp'
+
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 # ranger # open ranger at login
 

@@ -144,17 +144,8 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - `/boot/config.txt`: `over_voltage=6; arm_freq=2000; gpu_freq=750; device_tree_param=audio=on` [ref](https://magpi.raspberrypi.org/articles/how-to-overclock-raspberry-pi-4)
   - CPU temp: `sudo pacman -S raspberrypi-firmware`, and run `/opt/vc/bin/vcgencmd measure_temp`
   - Hardware [ref](https://archlinuxarm.org/wiki/Raspberry_Pi)
+  - Bluetooth, kensington trackball, [ref](https://wiki.archlinux.org/index.php/Bluetooth_mouse)
 
   - TODO: gtk2 and 3 configs should put in ./roll, personal not requiring sudo
-  - TODO: change gtk font to sans for perfect terminal experience
   - TODO: change theme to Adwaita-dark, config lxappearance
-
-
-- [Novaspirit blog, 2017](https://www.novaspirit.com/2017/04/25/installing-arch-linux-raspberry-pi/)
-  - Some tools might not be available in 2020
-  - Wifi setup process works
-
-Trouble Shooting:
-- `ping google.com` -> `Name or service not known`, then `pacman -Syu` failed
-
 
