@@ -4,7 +4,7 @@
 sudo apt update
 sudo apt upgrade
 sudo apt dist-upgrade
-sudo apt install net-tools network-manager build-essential cmake make gcc python3-dev jupyter-notebook
+sudo apt install net-tools network-manager build-essential cmake make gcc python3-dev jupyter-notebook libatlas-base-dev
 sudo apt install ranger zsh curl git vim fzf htop xcape tmux ctags neofetch python-pip zip unzip nodejs yarn
 
 sudo apt install xorg i3 
@@ -22,3 +22,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 mkdir -p ~/.config/autostart
 cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart
+

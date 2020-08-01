@@ -158,13 +158,18 @@ Standard procedure for Pi4
 - `sudo useradd -d /home/shu -m shu; sudo passwd shu` set pass, `vi /etc/sudoers.d/custom` add `shu ALL=NOPASSWD: ALL`, then su to shu and `sudo userdel pi`
 - git clone grwm then `./rock_pi4_pios` and `./roll`
 - Change hostname: `hostnamectl set-hostname "pi"` and reboot
-- Connect, `nmcli device wifi connect "NAME" password "PASSWD"`, reboot
 - select font `Sans 9` in `lxappearance`, use system font for xfce4-terminal
 - `i3` and setup Chromium plugins and sys fonts by gtk2 and gtk3, add `exec i3` in `~/.xinitrc`
-- `sudo raspi-config` for keyboard (generic + Other-English(US))
-- RPi OS is not using nmcli
+- `sudo raspi-config` for keyboard (generic + Other-English(US)) and network, don't use nmcli
 
-- TODO: mouse big
+
+## KBOS
+
+- https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi 
+- sudo apt install libilmbase-dev libopenexr-dev libgstreamer1.0-dev
+- sudo pip3 install opencv-python==3.4.6.27 picamera ipython ipdb --upgrade
+
+- https://qengineering.eu/install-tensorflow-2-lite-on-raspberry-pi-4.html
 
 
 
