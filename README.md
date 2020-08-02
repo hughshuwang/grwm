@@ -1,13 +1,17 @@
 # Get-Ready-with-Me! 🤩
 
 **Sync fast and live the immortal \& elegant GNU/Linux lifestyle!**  
-***@debian @vim @i3wm @zsh @ranger @xfce4-term @vscode @hhkb***  
+***@debian @arch @vim @i3wm @zsh @xfce4-term @vscode @hhkb***  
 Scripts and dotfiles for setting up and managing a custom system environment.  
-
 
 *v1.2 (July 31, 2020): Overclocked Pi 4B + Arch Linux/Manjaro KDE/PiOS + i3wm.*  
 *v1.1 (July 22, 2020): MacBook Pro A1502 + Pop!_OS 20.04 LTS + i3wm/GNOME3.*  
 *v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m.*
+
+
+
+<img src="./assets/archpi.JPG" alt="drawing" style="width:555px;"/>
+
 
 
 
@@ -39,7 +43,7 @@ Inspired and powered by [dotbot](https://github.com/anishathalye/dotbot) and [gr
 
 ## SOP
 
-Starting from a clean install, assuming a Debian-based system:
+Starting from a clean install, assuming a Debian/Arch-based system:
 - **Basics:**
   - UEFI and drivers: disable Secure-Boot; check kb, tracking, bt, wifi, display, fprint, battery, sleep/suspend, speaker, and mic 
   - Shortcuts: Switch app: Ctrl+Tab, Switch windows: Super+Tab, Close/Hide window: Ctrl+q/h, Full: Shift+Ctrl+f
