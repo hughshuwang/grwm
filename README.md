@@ -102,8 +102,9 @@ Git submodules (dotbot and vim/zsh plugins) should be handled carefully during r
 - **Vundle.vim**: `git submodule add https://github.com/VundleVim/Vundle.vim editor/vim/bundle/Vundle.vim`
 
 
+## Pi4 Distro Collections
 
-## Manjaro KDE on Pi4
+### Manjaro KDE on Pi4
 
 Standard procedure for Pi4 running officially supported Manjaro KDE
 - Bluetooth mouse, wifi, resolution.
@@ -112,7 +113,7 @@ Standard procedure for Pi4 running officially supported Manjaro KDE
 - `./rock_pi4` and then `./roll`
 
 
-## Arch Linux on Pi4
+### Arch Linux on Pi4
 
 Standard procedure for Pi4 running offcially supported Arch Linux ARM
 - [Official Installation Guide](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4)
@@ -141,7 +142,7 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
   - TODO: change theme to Adwaita-dark, config lxappearance
 
 
-## RPiOS on Pi4
+### RPiOS on Pi4
 
 Standard procedure for Pi4
 - Make a NOOBS sd card, `sudo fdisk /dev/sdb` and make a primary for the whole card with `mkfs.vfat`
@@ -154,12 +155,10 @@ Standard procedure for Pi4
 - `sudo raspi-config` for keyboard (generic + Other-English(US)) and network, don't use nmcli
 
 
-## KBOS
-
+### KBOS
 - https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi 
 - sudo apt install libilmbase-dev libopenexr-dev libgstreamer1.0-dev
 - sudo pip3 install opencv-python==3.4.6.27 picamera ipython ipdb --upgrade
-
 - https://qengineering.eu/install-tensorflow-2-lite-on-raspberry-pi-4.html
 
 
