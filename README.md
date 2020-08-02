@@ -5,10 +5,9 @@
 Scripts and dotfiles for setting up and managing a custom system environment.  
 
 
-*v1.3 (July 30, 2020): Perfect experience with Overclocked Pi 4B + Arch Linux + i3wm.*  
-*v1.2 (July 26, 2020): Perfect experience with Raspberry Pi 4B + Manjaro ARM KDE Plasma.*  
-*v1.1 (July 22, 2020): Perfect experience with MBP A1502 + Pop!_OS 20.04 LTS + i3wm.*  
-*v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m from flashing to done.*
+*v1.2 (July 31, 2020): Overclocked Pi 4B + Arch Linux/Manjaro KDE/PiOS + i3wm.*  
+*v1.1 (July 22, 2020): MacBook Pro A1502 + Pop!_OS 20.04 LTS + i3wm/GNOME3.*  
+*v1.0 (July 15, 2020): SOP works out-of-the-box and takes <20m.*
 
 
 
@@ -74,14 +73,6 @@ Starting from a clean install, assuming a Debian-based system:
   - `sudo systemctl status apache2`
   - TBC:
     - How to call mysql 
-
-- **Pi4**:
-  - Using raspbian lite 32 official image and etcher for direct sd flashing, `pi; raspberry` to login
-  - `sudo raspi-config` get wifi connected and configs saved, resolution of console, locale `en_US UTF-8`, keyboard
-  - `sudo apt-get update; sudo apt-get upgrade; sudo reboot`
-  - `sudo apt-get install --no-install-recommends xserver-xorg xinit; sudo reboot`
-  - `sudo apt-get install i3; startx`
-  - x server: error when running `startx`, [ref](https://www.raspberrypi.org/forums/viewtopic.php?t=171843)
 
 
 
