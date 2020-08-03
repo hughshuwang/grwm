@@ -10,7 +10,7 @@ Scripts and dotfiles for setting up and managing a custom system environment.
 
 
 
-<img src="./assets/archpi.JPG" alt="drawing" style="width:555px;"/>
+<img src="./assets/archpi.JPG" alt="drawing" style="width:333px;"/>
 
 
 
