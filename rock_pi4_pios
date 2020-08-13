@@ -3,13 +3,13 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt dist-upgrade
-sudo apt install net-tools network-manager build-essential cmake make gcc python3-dev jupyter-notebook libatlas-base-dev
-sudo apt install ranger zsh curl git vim vim-gtk3 fzf htop xcape tmux ctags neofetch python-pip zip unzip nodejs yarn blueman
-
-sudo apt install xorg i3 
-sudo apt install chromium xfce4-terminal nautilus w3m lxappearance scrot compton feh rofi --fix-missing
-sudo apt install fonts-dejavu fonts-firacode
+# sudo apt install net-tools network-manager # no nmcli, use sudo raspi-config
+sudo apt install ranger zsh curl git vim vim-gtk3 fzf htop xcape tmux ctags neofetch zip unzip yarn blueman
+sudo apt install python-pip build-essential cmake make gcc python3-dev jupyter-notebook libatlas-base-dev
+sudo apt install xorg i3 chromium xfce4-terminal nautilus w3m lxappearance scrot compton feh rofi --fix-missing
+sudo apt install mpd pulseaudio # audio handling, with mpd seems like it's ok 
+# if audio not working again, ref: https://dbader.org/blog/crackle-free-audio-on-the-raspberry-pi-with-mpd-and-pulseaudio
+# sudo apt install fonts-dejavu fonts-firacode # hold your fire on font, use default if possible
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh) # change default shell as zsh

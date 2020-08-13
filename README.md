@@ -150,10 +150,9 @@ Standard procedure for Pi4 running offcially supported Arch Linux ARM
 
 Standard procedure for Pi4
 - Make a NOOBS sd card, `sudo fdisk /dev/sdb` and make a primary for the whole card with `mkfs.vfat`
-- `sudo mount /dev/sdb1 /mnt/sdb; sudo cp -r ~/Downloads/noobs/* /mnt/sdb`, then plugin to install
+- `sudo mount /dev/sdb1 /mnt/sdb; sudo cp -r ~/Downloads/noobs/* /mnt/sdb`, then plugin to install, then follow sop
 - `sudo useradd -d /home/shu -m shu; sudo passwd shu` set pass, `vi /etc/sudoers.d/custom` add `shu ALL=NOPASSWD: ALL`, then su to shu and `sudo userdel pi`
 - git clone grwm then `./rock_pi4_pios` and `./roll`
-- Change hostname: `hostnamectl set-hostname "pi"` and reboot
 - select font `Sans 9` in `lxappearance`, use system font for xfce4-terminal
 - `i3` and setup Chromium plugins and sys fonts by gtk2 and gtk3, add `exec i3` in `~/.xinitrc`
 - `sudo raspi-config` for keyboard (generic + Other-English(US)) and network, don't use nmcli
