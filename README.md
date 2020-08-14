@@ -155,7 +155,7 @@ Standard procedure for Pi4
 - git clone grwm then `./rock_pi4_pios` and `./roll`
 - select font `Sans 9` in `lxappearance`, use system font for xfce4-terminal
 - `i3` and setup Chromium plugins and sys fonts by gtk2 and gtk3, add `exec i3` in `~/.xinitrc`
-- `sudo raspi-config` for keyboard (generic + Other-English(US)) and network, don't use nmcli
+- `sudo raspi-config` for keyboard (generic + Other-English(US)), locale!!! (US) and network, don't use nmcli
 
 
 ### KBOS
