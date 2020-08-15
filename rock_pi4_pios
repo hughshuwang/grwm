@@ -1,5 +1,6 @@
 #!/bin/bash
 # rock_pi4_pios
+# start with clean install with desktop, then `echo 'exec i3' > ~/.xinitrc` and select boot to cli, then startx 
 
 sudo apt update
 sudo apt upgrade
@@ -8,7 +9,7 @@ sudo apt install ranger zsh curl git vim vim-gtk3 fzf htop xcape tmux ctags neof
 sudo apt install python-pip build-essential cmake make gcc jupyter-notebook
 
 # sudo apt install xorg chromium # only for clean version
-sudo apt install i3 xfce4-terminal nautilus w3m scrot feh rofi --fix-missing
+sudo apt install i3 xfce4-terminal nautilus w3m scrot feh rofi
 # sudo apt install mpd pulseaudio # audio handling, with mpd seems like it's ok 
 # if audio not working again, ref: https://dbader.org/blog/crackle-free-audio-on-the-raspberry-pi-with-mpd-and-pulseaudio
 # sudo apt install fonts-dejavu fonts-firacode # hold your fire on font, use default if possible
@@ -25,7 +26,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 mkdir -p ~/.config/autostart
 cp ./remap/xmodmap/xmodmap.desktop ~/.config/autostart
 
-
-# alternative process for debugging which component is causing audio bug
-# sudo apt update # update source
-# sudo apt install xorg i3 chromium # get raw i3 and chromium asap
