@@ -194,5 +194,9 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 # kbos obj detection proj
 export PYTHONPATH=$PYTHONPATH:$HOME/tensorflow/models/research:$HOME/tensorflow/models/research/slim
 
+# quant_dev home dir 
+export QUANT_HOME=$HOME/quant_dev
+
+# items when starting a new shell
 tt
 cl
