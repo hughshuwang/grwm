@@ -5,13 +5,13 @@
 	required = true
 [user]
 	name = Shu Wang
-    email = hugh.shu.wang@gmail.com
+	email = swang@55-ip.com
 [color]
 	ui = true
 [alias]
 	lg = log --color --graph \n    --pretty=format:'%Cred%h%Creset \n    -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \n    --abbrev-commit
 [credential]
 	helper = store
-	username = hughshuwang
+	username = Shu-Wang-55ip
 [core]
 	editor = vim

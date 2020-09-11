@@ -44,13 +44,17 @@ set fillchars+=vert:\
 set clipboard=unnamedplus
 " set foldmethod=marker
 
+" Ranger setups
+nmap rr :Ranger<CR>
+
 " NERDTree setups
 nmap nt :NERDTreeToggle<CR>
 let NERDTreeWinSize=30
 let NERDTreeShowHidden=1
 
 " Tlist setups
-nmap tl :TlistToggle<CR>
+" tl to jump to it
+nmap tl :TlistOpen<CR> 
 let Tlist_WinWidth=30
 let Tlist_Use_Right_Window=0
 let Tlist_Auto_Update=1
@@ -78,7 +82,6 @@ nmap wm :WMToggle<CR>
 " gruvbox dark
 autocmd vimenter * colorscheme gruvbox
 set bg=dark
-
 set colorcolumn=80
 
 " leader key remap
@@ -118,9 +121,10 @@ nnoremap <leader>7 :buffer 7<CR>
 nnoremap <leader>8 :buffer 8<CR>
 nnoremap <leader>9 :ls<CR>
 nnoremap <leader>0 :bd<CR>
+nnoremap <leader><Tab> :bnext<CR>
 
 " Elegant splitting
-nnoremap <leader><Tab> <C-W><C-W>
+" nnoremap <leader><Tab> <C-W><C-W>
 nnoremap <leader>j <C-W><C-j>
 nnoremap <leader>k <C-W><C-k>
 nnoremap <leader>l <C-W><C-l>
@@ -143,7 +147,6 @@ nmap <leader>= :vertical resize +5<CR>
 nmap <leader>- :vertical resize -5<CR>
 nmap <leader>, :res -5<CR>
 nmap <leader>. :res +5<CR>
-filetype on " ON for TagList
 
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -154,6 +157,12 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" latex support
+Plugin 'vim-latex/vim-latex'
+
+" ranger integration
+Plugin 'francoiscabrol/ranger.vim'
 
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'mbbill/undotree'
@@ -204,14 +213,23 @@ autocmd FileType nerdtree setlocal relativenumber
 " Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Pandoc Family
-" Plugin 'vim-pandoc/vim-pandoc'
-" Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-rmarkdown'
 " let g:pandoc#modules#disabled = ["spell"]
+
+" force filetype to rmarkdown again explicitly
+au! BufRead,BufNewFile *.Rmd  set filetype=rmarkdown
 
 let python_highlight_all=1
 
 call vundle#end()
 
+" get rid of underscore highlighting in markdown
+syn match markdownError "\w\@<=\w\@="
+" syn clear markdownError
+
 " filetype plugin indent on
 " To ignore plugin indent changes, instead use:
+filetype on " ON for TagList
 filetype plugin on
