@@ -30,7 +30,7 @@
     ~/.local/share/xfce4/terminal/colorschemes/Gruvbox-dark.theme: shell/Gruvbox-dark.theme
  
     # git
-    ~/.gitconfig: git/gitconfig
+    # ~/.gitconfig: git/gitconfig
 
     # dev
     # ~/.ipython: dev/ipython

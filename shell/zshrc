@@ -195,7 +195,7 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 export PYTHONPATH=$PYTHONPATH:$HOME/tensorflow/models/research:$HOME/tensorflow/models/research/slim
 
 # quant_dev home dir 
-export QUANT_HOME=$HOME/quant_dev
+export QUANT_HOME=$HOME/quanthub
 
 # items when starting a new shell
 tt

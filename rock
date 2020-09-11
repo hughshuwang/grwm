@@ -10,6 +10,8 @@ sudo apt install ranger zsh curl git vim vim-gtk3 exuberant-ctags fzf highlight 
 sudo apt install i3 xbacklight alsa-utils pulseaudio playerctl blueman feh lxappearance arc-theme arandr rofi compton
 sudo apt install caca-utils highlight atool w3m poppler-utils mediainfo gnome-tweak-tool fprintd neofetch scrot
 sudo apt install code google-chrome-stable xfce4-terminal python3-setuptools
+sudo apt install texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+
 curl -fsSL https://code-server.dev/install.sh | sh # code-server
 PATH="$HOME/.local/bin:$PATH" # password set in dotfiles
 # input setup manually added in chrome
