@@ -91,7 +91,8 @@ A list of obstacles I didn't expect:
 - Screen brightness control: [xbacklight](https://askubuntu.com/questions/715306/xbacklight-no-outputs-have-backlight-property-no-sys-class-backlight-folder), resolution needs to be reload `ctrl+shift+s` after login
 - System-wise GUI appearance: use `lxappearance` to select gtk themes `Adwaita-dark` or `arc-dark`, icons `pop`, and fonts
 - For Magic Mouse 2, follow instructions in [ref](https://github.com/rohitpid/Linux-Magic-Trackpad-2-Driver), for speed run `xinput set-prop 10 307 -1.0`, follow [ref](https://www.reddit.com/r/i3wm/comments/4efbsm/mouse_speed/)
-
+- Change hostname: `hostnamectl set-hostname "pi"` and reboot
+- UNSOLVED: USB drive turned Read-only and cannot log in for unknown reasons.
 
 
 ## Compatibility
