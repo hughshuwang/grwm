@@ -53,6 +53,7 @@ Starting from a clean install, assuming a Debian/Arch-based system:
   - `./roll` after selecting the correct (win/mac) xmodmap conf in roll.conf, reboot/relogin
   - `sudo apt-get install mbpfan` for MBP and check by `lsmod | grep -e applesmc -e coretemp`
   - `git config --global credential.helper store` then `git pull/push` to enter credentials
+  - `git config --global user.name XXXX; git config --global user.email` to set up git profile, when switching, delete credential files and change name & email lines
   - `:PluginInstall` in vim, `python3 ~/.vim/bundle/YouCompleteMe/install.py` to build ycmd
   - In chrome, install gnome shell extentions and apply transparent top bar, add input source
   - In tweaks, change theme to `Adwaita-dark`, top bar shows battery pctg
