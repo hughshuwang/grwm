@@ -45,8 +45,8 @@
     ~/.config/neofetch/config.conf: config/neofetch/config.conf
 
     # remap (under x11 using xmodmap and xcape
-    # ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
-    ~/.xmodmap.conf: remap/xmodmap/xmodmap_mac.conf
+    ~/.xmodmap.conf: remap/xmodmap/xmodmap_win.conf
+    # ~/.xmodmap.conf: remap/xmodmap/xmodmap_mac.conf
     ~/.xmodmap.sh: remap/xmodmap/xmodmap.sh
     ~/.xbindkeysrc: remap/xmodmap/xbindkeysrc
 
