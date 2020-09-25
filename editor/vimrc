@@ -82,7 +82,7 @@ nmap wm :WMToggle<CR>
 " gruvbox dark
 autocmd vimenter * colorscheme gruvbox
 set bg=dark
-set colorcolumn=80
+set colorcolumn=120
 
 " leader key remap
 let mapleader = "\<space>"
