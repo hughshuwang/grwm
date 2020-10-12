@@ -24,6 +24,8 @@ set incsearch
 
 set cmdheight=1
 set runtimepath+=~/.vim_runtime
+set runtimepath+=~/lilypond/usr/share/lilypond/current/vim/
+
 set encoding=utf-8
 set viminfo='20
 set modifiable
@@ -93,8 +95,8 @@ nnoremap <leader>/ :set hlsearch!<CR>
 " Remap Escape to quit terminal normal
 " https://github.com/vim/vim/issues/2216
 tnoremap <Esc> <C-\><C-N> 
-nnoremap <leader>t :terminal<CR>
-nnoremap <leader>v :vertical terminal<CR>
+nnoremap <leader>c :terminal<CR>
+nnoremap <leader>vc :vertical terminal<CR>
 
 " quick page rolling
 " nnoremap <leader>n :bnext<CR>
@@ -152,11 +154,16 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>" 
 
+nnoremap <leader>t :TestNearest -s <CR>
+nnoremap <leader>T :TestFile -s <CR>
 
 " VUNDLE PLUGIN SECTION "
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" unit-testting support
+Plugin 'vim-test/vim-test'
 
 " latex support
 Plugin 'vim-latex/vim-latex'
@@ -200,7 +207,7 @@ let g:pydocstring_formatter = 'numpy'
 let g:pydocstring_doq_path = '/home/shu/anaconda3/bin/doq'
 
 " let g:airline_theme='onehalfdark' " third-party scheme
-let g:airline_theme='raven' " official airline scheme
+let g:airline_theme='bubblegum' " official airline scheme
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 " 'deus', 'angr', 'atomic', 'bubblegum', 'molokai', 'raven'
@@ -218,8 +225,17 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-rmarkdown'
 " let g:pandoc#modules#disabled = ["spell"]
 
+" Extra table alignment
+Plugin 'junegunn/vim-easy-align'
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+
 " force filetype to rmarkdown again explicitly
 au! BufRead,BufNewFile *.Rmd  set filetype=rmarkdown
+
+" lilypond
+au BufEnter *.ly compiler lilypond
+autocmd FileType lilypond nnoremap <leader>l :! lilypond %<CR>
 
 let python_highlight_all=1
 
