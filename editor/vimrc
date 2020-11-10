@@ -154,8 +154,8 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>" 
 
-nnoremap <leader>t :TestNearest -s <CR>
-nnoremap <leader>T :TestFile -s <CR>
+nnoremap <leader>t :TestNearest --pdb -s <CR>
+nnoremap <leader>T :TestFile --pdb -s <CR>
 
 " VUNDLE PLUGIN SECTION "
 " set the runtime path to include Vundle and initialize
