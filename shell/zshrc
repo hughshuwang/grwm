@@ -198,5 +198,4 @@ export PYTHONPATH=$PYTHONPATH:$HOME/tensorflow/models/research:$HOME/tensorflow/
 export QUANT_HOME=$HOME/quanthub
 
 # items when starting a new shell
-tt
 cl
